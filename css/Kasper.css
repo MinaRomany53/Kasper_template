@@ -1158,33 +1158,278 @@ header nav .form i {
     border: 1px solid var(--main-color);
 }
 
-.pricing .contact-us {
+.pricing .contact {
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 60px;
     text-align: center;
 }
 
-.pricing .contact-us p {
+.pricing .contact p {
     margin-bottom: 30px;
     text-align: center;
 }
 
-.pricing .contact-us a {
+.pricing .contact a {
     padding: 10px 20px;
     color: white;
     text-decoration: none;
     background-color: var(--main-color);
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
 /*End Pricing*/
+
+/*Start Subscribe*/
+.subscribe {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../imgs/subscribe.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+.subscribe::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 , 0 , 0 , 40%);
+}
+
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+}
+
+.subscribe form {
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.subscribe .container form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 30px;
+}
+
+.subscribe form input[type="email"] {
+    width: calc(100% - 130px);
+    border: 1px solid white;
+    background: none;
+    padding: 15px 20px 15px 60px;
+    color: white;
+    caret-color: var(--main-color);
+    border-right: none;
+}
+
+.subscribe form input[type="email"]::placeholder {
+    color: white;
+}
+
+.subscribe form input[type="submit"] {
+    width: 130px;
+    color: white;
+    background-color: var(--main-color);
+    cursor: pointer;
+    padding: 15px 30px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    border-left: none;
+}
+
+.subscribe form input[type="email"] ,
+.subscribe form input[type="submit"]:focus {
+    outline: none;
+}
+
+.subscribe .container p {
+    margin-left: 40px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media(max-width: 991px) {
+    .subscribe .container p {
+        margin: 30px 0 0;
+    }
+}
+/*End Subscribe*/
+
+/*Start contact-us*/
+.contact-us {
+    padding-bottom: var(--section-padding);
+    padding-top: var(--section-padding);
+}
+
+.contact-us .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .contact-us .content {
+        flex-direction: column ;
+    }
+}
+
+.contact-us .content form {
+    flex-basis: 70%;
+    position: relative;
+}
+
+.contact-us .content form .main-input {
+    padding: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    width: 100%;
+    caret-color: var(--main-color);
+}
+
+.contact-us .content form .main-input::placeholder {
+    text-transform: uppercase;
+    color: black;
+}
+
+.contact-us .content form .main-input:focus {
+    outline: none;
+}
+
+.contact-us .content form textarea {
+    height: 200px;
+    resize: none;
+}
+
+.contact-us .content form input[type="submit"] {
+    position: absolute;
+    right: 0;
+    background: var(--main-color);
+    padding: 20px 40px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+}
+
+.contact-us .content .info {
+    flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+    .contact-us .content .info {
+        order: -1;
+        text-align: center;
+    }
+}
+
+.contact-us .content .info h4 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.contact-us .content .info .phone {
+    display: block;
+    color:var(--paragraph-color);
+    margin-bottom: 10px;
+
+}
+
+.contact-us .content .info h4:nth-of-type(2) {
+    margin-top: 85px;
+}
+
+@media (max-width: 767px) {
+    .contact-us .content .info h4:nth-of-type(2) {
+        margin-top: 40px;
+    }
+}
+
+.contact-us .content .info address {
+    color:var(--paragraph-color);
+    line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+    .contact-us .content .info address {
+        margin-bottom: 60px;
+    }
+}
+/*"End contact-us*/
+
+/*Start Footer*/
+footer {
+    padding-top: calc(var(--section-padding) / 2 );
+    padding-bottom: calc(var(--section-padding) / 2 );
+    background-image: url(/imgs/footer.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0 , 0 , 0 , 60%);
+}
+
+footer .container {
+    position: relative;
+}
+
+footer img {
+    margin-bottom: 20px;
+}
+
+footer p:not(.copyright) {
+    font-size: 22px;
+    text-transform: uppercase ;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social a {
+    display: block;
+    color: white;
+    padding: 20px 10px;
+}
+
+footer .copyright {
+    margin-top: 30px;
+}
+
+footer .copyright span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/*End Footer*/
+
 
 
